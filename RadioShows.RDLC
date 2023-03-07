@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="RadioshowType_RadioShows">
+          <DataField>RadioshowType_RadioShows</DataField>
+        </Field>
+        <Field Name="Runtime_RadioShows">
+          <DataField>Runtime_RadioShows</DataField>
+        </Field>
+        <Field Name="Hostcode_RadioShows">
+          <DataField>Hostcode_RadioShows</DataField>
+        </Field>
+        <Field Name="HostName_RadioShows">
+          <DataField>HostName_RadioShows</DataField>
+        </Field>
+        <Field Name="AverageListeners_RadioShows">
+          <DataField>AverageListeners_RadioShows</DataField>
+        </Field>
+        <Field Name="AverageListeners_RadioShowsFormat">
+          <DataField>AverageListeners_RadioShowsFormat</DataField>
+        </Field>
+        <Field Name="AudienceShare_RadioShows">
+          <DataField>AudienceShare_RadioShows</DataField>
+        </Field>
+        <Field Name="AudienceShare_RadioShowsFormat">
+          <DataField>AudienceShare_RadioShowsFormat</DataField>
+        </Field>
+        <Field Name="Advertisingrevenue_RadioShows">
+          <DataField>Advertisingrevenue_RadioShows</DataField>
+        </Field>
+        <Field Name="Advertisingrevenue_RadioShowsFormat">
+          <DataField>Advertisingrevenue_RadioShowsFormat</DataField>
+        </Field>
+        <Field Name="RoyaltyCost_RadioShows">
+          <DataField>RoyaltyCost_RadioShows</DataField>
+        </Field>
+        <Field Name="RoyaltyCost_RadioShowsFormat">
+          <DataField>RoyaltyCost_RadioShowsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
