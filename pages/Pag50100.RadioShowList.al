@@ -61,12 +61,12 @@ page 50106 "Radio Show List"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Run time field.';
                 }
-                // 
-                // field(SystemModifiedBy; Rec.SystemModifiedBy)
-                // {
-                //     ApplicationArea = All;
-                //     ToolTip = 'Specifies the value of the SystemModifiedBy field.';
-                // }
+                
+                field(Active; Rec.Active)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies if show is active.';
+                }
             }
         }
     }

@@ -35,14 +35,14 @@ page 50102 "RC Radio shows Activities"
             }
             cuegroup(Group2)
             {
-                CuegroupLayout = Wide;
+                // CuegroupLayout = Wide;
                 ShowCaption = false;
                 field("Current Users"; Rec."Number Of Current Users")
                 {
                     ApplicationArea = All;
                     Caption = 'Concurrent Users';
                     Editable = false;
-                    ToolTip = 'Comcurrent Users';
+                    ToolTip = 'Concurrent Users';
                     DrillDownPageId = "Concurrent Session List";
                 }
                 field("Total Shows Air Time"; Rec."Total Shows Time")
@@ -68,7 +68,7 @@ page 50102 "RC Radio shows Activities"
     trigger OnAfterGetCurrRecord()
     begin
         rec."Total Month Log Time" := rec.GetTotalMonthLogTime();
-        
+        rec."Number Of Radio Shows" := rec.GetNumberOfRadioShows();
 
     end;
 

@@ -14,6 +14,7 @@ table 50101 "Radio Shows Number Cue"
         {
             Caption = 'Number Of Radio Shows';
             DataClassification = ToBeClassified;
+            
         }
         field(3; "Total Shows Time"; Duration)
         {
@@ -28,7 +29,7 @@ table 50101 "Radio Shows Number Cue"
         }
         field(5; "Total Month Log Time"; Decimal)
         {
-
+            Caption = 'Monthly log time';
         }
     }
     keys
@@ -52,6 +53,14 @@ table 50101 "Radio Shows Number Cue"
         //     MonthlyLogTime += UserTmeRegister.Minutes;
         // until UserTmeRegister.Next() = 0;
     end;
+
+    procedure GetNumberOfRadioShows() NumberOfRadioShows: Integer
+    var 
+       RadioShowsTable : Record SkizaRadioShows;
+    begin
+        NumberOfRadioShows := RadioShowsTable.Count;
+    end;
+    
     
 
 }

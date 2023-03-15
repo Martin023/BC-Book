@@ -2,6 +2,7 @@
 .snapshots/
 .vscode-test/
 .alpackages/
+.alcache
 
 Default publisher_BCGroup_1.0.0.0.app
 app.json

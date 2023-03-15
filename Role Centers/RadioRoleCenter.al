@@ -10,23 +10,23 @@ page 50105 "Radio MD "
         {
             group(group1)
             {
-                Caption = 'Group 1';
+                Caption = 'Activities';
                 part(part3; "RC Radio shows Activities")
                 {
                     ApplicationArea = All;
                 }
-                part(part1; "Acc. Receivable Activities")
-                {
-                    ApplicationArea = All;
-                }
-                part(part2; "Acc. Payables Activities")
-                {
-                    ApplicationArea = All;
-                }
+                // part(part1; "Acc. Receivable Activities")
+                // {
+                //     ApplicationArea = All;
+                // }
+                // part(part2; "Acc. Payables Activities")
+                // {
+                //     ApplicationArea = All;
+                // }
 
 
             }
-            part(HealineSecrtion; "RC Radio Manager Headline")
+            part(HealineSection; "RC Radio Manager Headline")
             {
                 ApplicationArea = All;
             }
