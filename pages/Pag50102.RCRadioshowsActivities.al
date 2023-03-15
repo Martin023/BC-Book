@@ -62,6 +62,30 @@ page 50102 "RC Radio shows Activities"
                     DrillDownPageId = "Radio Show List";
                 }
             }
+            cuegroup("action tiles")// an action cuegroup ie leads to other pages etc
+            {
+                actions
+                {
+                    action(HomePage)
+                    {
+                        Image = TileViolet;
+
+                        trigger OnAction()
+                        begin
+                            Hyperlink('https://google.com');
+                        end;
+                    }
+                    action(Youtube)
+                    {
+                        Image = TileCamera;
+
+                        trigger OnAction()
+                        begin
+                            Hyperlink('https://youtube.com');
+                        end;
+                    }
+                }
+            }
         }
         
     }
@@ -86,6 +110,7 @@ page 50102 "RC Radio shows Activities"
                 end;
             }
         }
+
     }
     trigger OnOpenPage()
     begin
