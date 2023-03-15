@@ -9,27 +9,51 @@ page 50105 "Radio MD "
         area(RoleCenter)
         {
 
-        
-            part(part3; "RC Radio shows Activities")
-            {
-                ApplicationArea = Basic, Suite;
-            }
-            // part(part1; "Acc. Receivable Activities")
-            // {
-            //     ApplicationArea = All;
-            // }
-            // part(part2; "Acc. Payables Activities")
-            // {
-            //     ApplicationArea = All;
-            // }
-
-
-
+            ////////////////////////////////////////////Headline Section start with it - order matters/////////////////////////
 
             part(HealineSection; "RC Radio Manager Headline")
             {
                 ApplicationArea = All;
             }
+        
+            part(part3; "RC Radio shows Activities")
+            {
+                ApplicationArea = Basic, Suite;
+            }
+            part(part1; "Acc. Receivable Activities")
+            {
+                ApplicationArea = All;
+            }
+            part(part2; "Acc. Payables Activities")
+            {
+                ApplicationArea = All;
+            }
+            part(part4; "Email Activities")
+            {
+                ApplicationArea = All;
+            }
+            
+            part(part7;"My Customers")
+            {
+                ApplicationArea = All;
+            }
+            part(part8; "My Vendors")
+            {
+                ApplicationArea = All;
+            }
+            part(part5; "Finance Performance")
+            {
+                ApplicationArea = All;
+            }
+            part(part6; "Power BI Report Spinner Part")
+            {
+                ApplicationArea = All;
+            }
+            systempart(Part9;MyNotes)
+            {
+                ApplicationArea = All;
+            }
+           
         }
 
     }
