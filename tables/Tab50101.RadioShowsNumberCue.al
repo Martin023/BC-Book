@@ -20,7 +20,7 @@ table 50101 "Radio Shows Number Cue"
         {
             Caption = 'Total Shows Time';
             FieldClass = FlowField;
-            CalcFormula = Sum(SkizaRadioShows."Run time" where(Active = CONST(true)));
+            CalcFormula = Sum(SkizaRadioShows."Run time" where(Active = filter(true)));
         }
         field(4; "Number Of Current Users"; Integer)
         {
@@ -30,6 +30,11 @@ table 50101 "Radio Shows Number Cue"
         field(5; "Total Month Log Time"; Decimal)
         {
             Caption = 'Monthly log time';
+        }
+        field(6;"Total radio revenue"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum(SkizaRadioShows."Advertising revenue" where (Active = const(true)));
         }
     }
     keys

@@ -1,6 +1,6 @@
 page 50102 "RC Radio shows Activities"
 {
-    Caption = 'Radio Activities';
+    Caption = 'Activities';
     PageType = CardPart;
     SourceTable = "Radio Shows Number cue";
     RefreshOnActivate = true;
@@ -31,12 +31,20 @@ page 50102 "RC Radio shows Activities"
                     DrillDownPageId = "User Time Registers";
 
                 }
+                field("Advertising Revenue"; Rec."Total radio revenue")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Advertising revenue';
+                    Editable = false;
+                    ToolTip = 'Advertising revenue';
+
+                }
 
             }
             cuegroup(Group2)
             {
                 // CuegroupLayout = Wide;
-                ShowCaption = false;
+                Caption = 'User Info';
                 field("Current Users"; Rec."Number Of Current Users")
                 {
                     ApplicationArea = All;
@@ -53,6 +61,29 @@ page 50102 "RC Radio shows Activities"
                     ToolTip = 'Total Shows Air Time';
                     DrillDownPageId = "Radio Show List";
                 }
+            }
+        }
+        
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action("Cues Setup")
+            {
+                ApplicationArea = Basic,Suite;
+                Caption = 'Cues set-up';
+                Image = Setup;
+                ToolTip = 'Set up cues related to RC';
+
+                trigger OnAction()
+                var 
+                    CuesAndKPIs : Codeunit "Cues And KPIs";
+                    CueRecordRef : RecordRef;
+                begin
+                    CueRecordRef.GetTable(Rec);
+                    CuesAndKPIs.OpenCustomizePageForCurrentUser(CueRecordRef.Number);
+                end;
             }
         }
     }

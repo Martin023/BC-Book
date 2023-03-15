@@ -8,24 +8,24 @@ page 50105 "Radio MD "
 
         area(RoleCenter)
         {
-            group(group1)
+
+        
+            part(part3; "RC Radio shows Activities")
             {
-                Caption = 'Activities';
-                part(part3; "RC Radio shows Activities")
-                {
-                    ApplicationArea = All;
-                }
-                // part(part1; "Acc. Receivable Activities")
-                // {
-                //     ApplicationArea = All;
-                // }
-                // part(part2; "Acc. Payables Activities")
-                // {
-                //     ApplicationArea = All;
-                // }
-
-
+                ApplicationArea = Basic, Suite;
             }
+            // part(part1; "Acc. Receivable Activities")
+            // {
+            //     ApplicationArea = All;
+            // }
+            // part(part2; "Acc. Payables Activities")
+            // {
+            //     ApplicationArea = All;
+            // }
+
+
+
+
             part(HealineSection; "RC Radio Manager Headline")
             {
                 ApplicationArea = All;
