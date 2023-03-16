@@ -62,13 +62,14 @@ page 50102 "RC Radio shows Activities"
                     DrillDownPageId = "Radio Show List";
                 }
             }
-            cuegroup("action tiles")// an action cuegroup ie leads to other pages etc
+            cuegroup("action tiles")// an action cuegroup ie leads to other pages etc.
             {
+                Caption = 'The Web';
                 actions
                 {
-                    action(HomePage)
+                    action(Google)
                     {
-                        Image = TileViolet;
+                        Image = TileCloud;
 
                         trigger OnAction()
                         begin
@@ -83,6 +84,25 @@ page 50102 "RC Radio shows Activities"
                         begin
                             Hyperlink('https://youtube.com');
                         end;
+                    }
+                }
+            }
+            cuegroup("action")// an action cuegroup ie leads to other pages etc.
+            {
+                Caption = 'Short-cuts';
+                actions
+                {
+                    action("Bank reconcilliation")
+                    {
+                        Image = TileReport;
+                        RunObject = page "Bank Acc. Reconciliation List";
+                        Caption  = 'Bank acc reconcilliations';
+                    }
+                    action("Bank Statements")
+                    {
+                        Image = TileHelp;
+                        RunObject = page "Bank Account Statement";
+                        Caption = 'Bank statements';
                     }
                 }
             }

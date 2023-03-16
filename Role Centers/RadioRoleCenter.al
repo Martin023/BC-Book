@@ -63,10 +63,10 @@ page 50105 "Radio MD "
         {
             group(General)
             {
-                Caption = 'General';
-                action("Skiza Radio MD")
+                Caption = 'Radio Management';
+                action("Radio Shows")
                 {
-                    RunObject = Page "Receivables-Payables";
+                    RunObject = Page "Radio Show List";
                     ApplicationArea = Basic, Suite;
 
                 }
@@ -84,21 +84,53 @@ page 50105 "Radio MD "
             }
             group("Group2")
             {
-                Caption = 'Workflows';
-                group(Workflows)
+                Caption = 'Receivables';
+                action(Customers)
                 {
-                    Caption = 'Workflows';
-                    action("Workflow")
-                    {
-                        RunObject = Page "Workflow";
-                        ApplicationArea = Basic, Suite;
-                    }
-                    action("Workflow user groups")
-                    {
-                        RunObject = Page "Workflow user group";
-                        ApplicationArea = Basic, Suite;
-                    }
+                    RunObject = page "Customer List";
+                    ApplicationArea = Basic, Suite;
                 }
+                action("Sales Orders")
+                {
+                    RunObject = page "Sales Order List";
+                    ApplicationArea = Basic, Suite;
+                }
+                action("Posted Sales invoices")
+                {
+                    RunObject = page "Posted Sales Invoice";
+                    ApplicationArea = Basic, Suite;
+
+                }
+                action("Sales Journal")
+                {
+                    RunObject = page "Sales Journal";
+                    ApplicationArea = Basic,Suite;
+                }
+                
+            }
+            group(group3)
+            {
+                Caption = 'Payables';
+                action("Vendors"){
+                    RunObject = page "Vendor List";
+                    ApplicationArea = Basic, Suite;
+                }
+                action ("Purchase Orders")
+                {
+                    RunObject = page "Purchase Order List";
+                    ApplicationArea = Basic, Suite;
+                }
+                action ("Purchase Invoices")
+                {
+                    RunObject = page "Purchase Invoices";
+                    ApplicationArea = Basic, Suite;
+                }
+                action (purchase)
+                {
+                    RunObject = page "Purchase Journal";
+                    ApplicationArea = Basic,Suite;
+                }
+
             }
             group(Reports)
             {
@@ -113,6 +145,23 @@ page 50105 "Radio MD "
                     RunObject = Report "Vendor summary report";
                     ApplicationArea = Basic, Suite;
                 }
+                action ("Customers list")
+                {
+                    RunObject = report "Customer - List";
+                    ApplicationArea = All;
+                }
+                action ("Top customers")
+                {
+                    RunObject = report "Customer - Top 10 List";
+                    ApplicationArea = All;
+                }
+                action ("Yop Vendors")
+                {
+                    RunObject = report "Vendor - Top 10 List";
+                    ApplicationArea = Basic,Suite;
+                }
+
+
             }
 
         }
