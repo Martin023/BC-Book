@@ -195,6 +195,11 @@ page 50105 "Radio MD "
                 RunObject = Page "Radio Show List";
                 ApplicationArea = Basic, Suite;
             }
+            action ("Chart of Accounts")
+            {
+                Caption = 'Chart of accounts';
+                RunObject = page "Chart of Accounts";
+            }
         }
         area(Creation) // Provides an area for actions that create new records
         {
